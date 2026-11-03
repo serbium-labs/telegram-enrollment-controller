@@ -1,6 +1,6 @@
 # Telegram Group Membership Manager
 
-**Status: development specification only — application code has not been implemented.**
+**Status: implementation in progress — repository foundation complete; bot behavior has not been implemented.**
 
 A TypeScript Telegram bot for one **private supergroup with forum topics**. In a private chat, the bot presents a localized **Enroll** action to non-members and **Unenroll** to ordinary members. Enrollment goes through bot-controlled join-request links and automatic eligible-request approval; removal is member-initiated and confirmation-gated. Production updates arrive through an **HTTPS webhook**. Operators may select each user's Telegram language automatically or force one supported language for everyone, with English as the final fallback.
 
@@ -32,7 +32,7 @@ Labels in this table describe the canonical English copy. The implemented bot mu
 
 ## Technical baseline
 
-Node.js LTS · TypeScript (strict with explicit annotations) · grammY · Fastify · Vitest · ESLint · Prettier · runtime schema validation · structured logging · durable operational persistence.
+Node.js 24 LTS · TypeScript (strict with explicit annotations) · grammY · Fastify · Vitest · ESLint · Prettier · runtime schema validation · structured logging · durable operational persistence.
 
 Translation resources use validated flat UTF-8 JSON catalogs with named placeholders and no runtime dependency on spreadsheet formats.
 
@@ -58,7 +58,7 @@ Do not expose the token, join links, webhook secret or operational data in versi
 6. Confirm translation catalog validation, liveness and readiness endpoints, test webhook verification, and run a safe end-to-end enrollment/removal test in a **non-production group**.
 7. Run typecheck, lint, format check, tests and coverage gates before production deployment.
 
-A runnable `.env.example`, translation catalog files, package scripts, HTTP service and application implementation belong to later TASKS.md epics; **they are not delivered as part of this documentation-only request**. The exact commands and catalogs must be added and verified during those tasks. See [DEPLOYMENT.md](DEPLOYMENT.md) for the required environment contract and deployment steps.
+A runnable `.env.example`, translation catalog files, HTTP service and application implementation belong to later TASKS.md epics. Foundation package scripts are available now; configuration, catalogs and deployable bot behavior are not. See [DEPLOYMENT.md](DEPLOYMENT.md) for the required environment contract and deployment steps.
 
 ## Localization contract
 
@@ -102,4 +102,4 @@ No unverified success messages or unsafe public-chat controls. Command tokens su
 
 ## Documentation scope
 
-This repository package defines **what to build**, not the implementation. [AGENTS.md](AGENTS.md) is the central engineering contract and the other capitalized root files provide focused detail without duplicating the entire specification.
+The capitalized root documents define **what to build**, while the implementation is being added in dependency order under `src/` and `tests/`. [AGENTS.md](AGENTS.md) is the central engineering contract and the other root documents provide focused detail without duplicating the entire specification.
