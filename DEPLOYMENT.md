@@ -4,7 +4,7 @@
 
 ## 1. Prerequisites
 
-- Supported Node.js LTS and deployed runtime/container.
+- Node.js 24 LTS satisfying `>=24.22.0 <25` and a compatible deployed runtime/container.
 - Bot token from Telegram **@BotFather**.
 - One **private supergroup** with forum topics enabled and a known numeric chat ID.
 - Bot is a group admin with capabilities required for invite creation/approval and restriction/removal (`can_invite_users`, `can_restrict_members`).

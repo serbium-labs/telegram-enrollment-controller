@@ -2,7 +2,7 @@
 
 **Project:** Telegram Group Membership Manager  
 **Specification:** v1.0  
-**Status:** Approved for implementation; this repository currently contains specification documents only.
+**Status:** Implementation in progress; repository foundation complete, bot behavior not implemented.
 
 ## Mission and fixed decisions
 
@@ -29,7 +29,7 @@ Do not implement topic-specific membership, manual administrator approval, third
 
 ## Non-negotiable engineering rules
 
-1. **No implementation in this document package.** When implementation begins, use strict TypeScript and Node.js LTS; use grammY for Telegram and Fastify for HTTPS webhook HTTP handling.
+1. **Implementation baseline:** use strict TypeScript and Node.js LTS; use grammY for Telegram and Fastify for HTTPS webhook HTTP handling.
 2. **Explicit types everywhere:** every declared variable and constant must have an explicit type annotation, including locally inferable values. Explicitly type parameters, return values, class fields and constructors as appropriate. Avoid `any`, unsafe assertions, non-null assertions, unchecked casting and implicit public contracts. External input starts as `unknown` and must be narrowed.
 3. **Naming:** PascalCase classes, interfaces, types, enums, and class files; camelCase methods, parameters and local variables/constants; UPPER_SNAKE_CASE shared static constants and enum members; descriptive boolean prefixes (`is`, `has`, `can`, `should`); lowercase kebab-case directories. No ambiguous `data`, `obj`, `val`, `res`, `tmp` where a domain name exists.
 4. **No comments in source code:** no inline/block/JSDoc/TODO/commented-out implementation. Put explanations in Markdown documentation. Prefer expressive types, names and decomposition.
@@ -69,4 +69,4 @@ Enable TypeScript `strict`, `noImplicitAny`, `strictNullChecks`, `noUncheckedInd
 
 ## Out-of-scope
 
-No implementation artifacts in this scaffold; no user database as a source of truth for membership, multi-group management, topic-level permissions, manual-review console, arbitrary user moderation, persisted locale preferences, language-selection UI, long polling, unsolicited notifications, or automation outside the described membership workflow.
+No user database as a source of truth for membership, multi-group management, topic-level permissions, manual-review console, arbitrary user moderation, persisted locale preferences, language-selection UI, long polling, unsolicited notifications, or automation outside the described membership workflow.

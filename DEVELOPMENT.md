@@ -4,7 +4,7 @@ Read [AGENTS.md](AGENTS.md) first. This document expands engineering conventions
 
 ## 1. Toolchain
 
-Use supported Node.js LTS, TypeScript, grammY, Fastify, Vitest, ESLint, Prettier, runtime schema validation (Zod or equivalent), structured logger (Pino or equivalent), and lightweight durable persistence. Pin compatible versions during TASK-001 and document the selected version constraints. Do not add a database framework, broker or microservices without a justified requirement.
+Use Node.js 24 LTS with the repository baseline `24.22.2`, the compatible engine range `>=24.22.0 <25`, and npm `11.19.1`. Use TypeScript, grammY, Fastify, Vitest, ESLint, Prettier, runtime schema validation (Zod or equivalent), structured logger (Pino or equivalent), and lightweight durable persistence. Keep compatible versions pinned and documented. Do not add a database framework, broker or microservices without a justified requirement.
 
 ## 2. Directory plan
 
@@ -82,9 +82,9 @@ When adding or changing bot-authored visible copy, update the English catalog an
 
 No source comments, including inline/block/JSDoc/TODO/commented-out code. Use descriptive naming, exact types, and narrow methods. Explain non-obvious design decisions in the relevant Markdown file, not the source. Do not suppress lint/type errors with comments.
 
-## 8. Proposed quality commands
+## 8. Required quality commands
 
-Once TASK-001 and TASK-061 establish scripts, the repository must expose documented equivalents of:
+The repository exposes:
 
 ```text
 npm run typecheck
@@ -95,7 +95,7 @@ npm run test:coverage
 npm run build
 ```
 
-These are required **script contracts**, not commands currently available in this documentation-only package. Ensure scripts are deterministic and work in CI.
+These scripts must remain deterministic and CI-safe. TASK-065 owns the final automated CI and coverage-gate integration.
 
 ## 9. Working procedure
 

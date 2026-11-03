@@ -86,7 +86,7 @@ Tests must use deterministic fixtures, injected clocks when time matters, contro
 
 ## 6. Quality gates
 
-Once code exists, CI must run scripts equivalent to:
+The foundation provides these local scripts; CI must run their equivalents:
 
 ```text
 npm run format:check
@@ -97,7 +97,7 @@ npm run test:coverage
 npm run build
 ```
 
-Exact npm scripts must be added and documented during implementation. Tests and lint/typecheck must pass without suppression. Catalog validation must prove that the English catalog covers every referenced string ID and that all other catalogs satisfy the canonical ID/placeholder contract. Target **≥90% statement and branch coverage** of domain and application layers. Coverage is not permission to skip critical authorization, fallback or partial-failure tests.
+The exact npm scripts are established; TASK-065 owns their automated CI integration and final thresholds. Tests and lint/typecheck must pass without suppression. Catalog validation must prove that the English catalog covers every referenced string ID and that all other catalogs satisfy the canonical ID/placeholder contract. Target **≥90% statement and branch coverage** of domain and application layers. Coverage is not permission to skip critical authorization, fallback or partial-failure tests.
 
 ## 7. Manual staging validation
 

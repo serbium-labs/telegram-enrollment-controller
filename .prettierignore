@@ -1,0 +1,17 @@
+.agents/
+coverage/
+dist/
+logs/
+node_modules/
+openspec/
+package-lock.json
+.env
+.env.*
+AGENTS.md
+ARCHITECTURE.md
+DEPLOYMENT.md
+DEVELOPMENT.md
+README.md
+SECURITY.md
+TASKS.md
+TESTING.md

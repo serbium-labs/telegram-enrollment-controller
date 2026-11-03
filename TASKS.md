@@ -1,6 +1,6 @@
 # TASKS.md — Implementation Backlog
 
-**Status:** Specification files prepared; implementation not started. All implementation tasks are unchecked.
+**Status:** Implementation in progress; repository foundation tasks are complete.
 
 **Authority:** [AGENTS.md](AGENTS.md) defines global rules. Topic requirements reside in the capitalized root documents. Task completion requires verifiable acceptance criteria.
 
@@ -14,17 +14,17 @@
 
 ## Progress
 
-**0 / 73 tasks completed** · **9 epics**
+**5 / 73 tasks completed** · **9 epics**
 
 ## EPIC 01 — Repository Foundation
 
 **Acceptance:** Project installs, validates configuration and translation catalogs, typechecks, lints and executes an empty test suite without configuration errors.
 
-- [ ] **TASK-001** — Initialize Node.js and TypeScript project.
-- [ ] **TASK-002** — Configure the strict TypeScript compiler.
-- [ ] **TASK-003** — Configure ESLint and Prettier.
-- [ ] **TASK-004** — Configure Vitest and the separate test directory.
-- [ ] **TASK-005** — Create modular source directory structure.
+- [x] **TASK-001** — Initialize Node.js and TypeScript project.
+- [x] **TASK-002** — Configure the strict TypeScript compiler.
+- [x] **TASK-003** — Configure ESLint and Prettier.
+- [x] **TASK-004** — Configure Vitest and the separate test directory.
+- [x] **TASK-005** — Create modular source directory structure.
 - [ ] **TASK-006** — Implement validated environment configuration, including required `BOT_LANGUAGE`.
 - [ ] **TASK-007** — Establish structured logging and application bootstrap.
 - [ ] **TASK-008** — Implement flat JSON translation catalog loading and validation with a complete canonical English catalog.
